@@ -1,0 +1,7 @@
+appName: drop-duplicate
+
+namespace: prm
+
+image:
+  name: alokwinwork/del-duplicates
+  tag: v1.0.4
