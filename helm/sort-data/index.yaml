@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  sort-data:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-05-29T14:28:16.194600532-04:00"
+    description: A Helm chart for Kubernetes
+    digest: a93d8230d7cb2d9822a529ae97a7a02ea089d06f8c1fcfcd7b8999b29cb37bc0
+    name: sort-data
+    type: application
+    urls:
+    - sort-data-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-05-29T14:28:16.193602486-04:00"

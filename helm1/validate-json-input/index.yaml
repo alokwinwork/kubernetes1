@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  validate-json-input:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-05-29T14:27:11.257691959-04:00"
+    description: A Helm chart for Kubernetes
+    digest: 7c2f20dbab50bb0392831181ff7abe2de842fe53bce47ce36136079a6e6048b8
+    name: validate-json-input
+    type: application
+    urls:
+    - validate-json-input-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-05-29T14:27:11.256554762-04:00"
