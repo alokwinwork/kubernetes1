@@ -1,0 +1,7 @@
+appName: convert-json
+
+namespace: prm
+
+image:
+  name: alokwinwork/convert-json
+  tag: v1.0.1

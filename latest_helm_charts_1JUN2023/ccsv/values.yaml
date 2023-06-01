@@ -1,0 +1,7 @@
+appName: convert-csv
+
+namespace: prm
+
+image:
+  name: alokwinwork/convert-csv
+  tag: v1.0.2
