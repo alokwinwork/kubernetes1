@@ -1,7 +1,0 @@
-appName: validate-json-input
-
-namespace: prm
-
-image:
-  name: alokwinwork/validate-json
-  tag: v1.3.4

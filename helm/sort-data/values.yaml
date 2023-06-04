@@ -1,7 +1,0 @@
-appName: sort-data
-
-namespace: prm
-
-image:
-  name: alokwinwork/sort-data
-  tag: v1.0.5

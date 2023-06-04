@@ -1,0 +1,59 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: istio-virtual-svc
+spec:
+  hosts: 
+  - main-service-v1-tm.prm.svc.cluster.local
+
+  http:
+  - name: virtual-service-routes
+    route:
+    - destination: 
+        host: main-service-v1-tm.prm.svc.cluster.local
+        subset: main-service1-tm-subset
+      weight: 80
+    
+    - destination:
+        host: main-service-v2-tm.prm.svc.cluster.local
+        subset: main-service2-tm-subset
+      weight: 20
+
+
+---
+
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
+metadata:
+  name: istio-destination-rule1
+spec:
+  host: main-service-v1-tm.prm.svc.cluster.local
+  subsets:
+  - name: main-service1-tm-subset
+    labels:
+      app: main-service-v1-tm
+      version: v2
+      chapter: istio
+      topic: traffic-management
+    trafficPolicy:
+      loadBalancer:
+        simple: ROUND_ROBIN
+
+---
+
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
+metadata:
+  name: istio-destination-rule2
+spec:
+  host: main-service-v2-tm.prm.svc.cluster.local
+  subsets:
+  - name: main-service2-tm-subset
+    labels:
+      app: main-service-v2-tm
+      version: v2
+      chapter: istio
+      topic: traffic-management
+    trafficPolicy:
+      loadBalancer:
+        simple: ROUND_ROBIN
