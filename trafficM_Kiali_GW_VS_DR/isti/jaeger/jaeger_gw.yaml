@@ -1,0 +1,21 @@
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  name: jaeger-ingress-gateway
+  namespace: istio-system
+
+spec:
+
+  selector:
+    app: istio-ingressgateway
+    istio: ingressgateway
+
+
+  servers:
+  - port:
+      number: 15443
+      name: http-jaeger
+      protocol: HTTP
+    hosts:
+    - "*"
+
